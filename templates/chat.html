@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Chatbot</title></head>
+<body>
+  <h1>Chat with TinyLlama</h1>
+  <form method="post">
+    <input type="text" name="user_input" placeholder="Ask something..." required />
+    <input type="submit" value="Send" />
+  </form>
+  {% if response %}
+    <p><strong>Bot:</strong> {{ response }}</p>
+  {% endif %}
+</body>
+</html>
