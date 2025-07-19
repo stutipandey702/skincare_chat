@@ -12,14 +12,15 @@ echo "Virtual environment created."
 source skin_env/bin/activate
 
 echo "Installing Python packages..."
-pip install --upgrade pip
-pip install torch transformers datasets peft accelerate flask
+python3 -m pip install --upgrade pip
+python3 -m pip install torch transformers datasets peft accelerate flask
 
 echo "Saving dependencies to requirements.txt..."
-pip freeze > requirements.txt
+python3 -m pip freeze > requirements.txt
 
-echo "Setup complete. To activate the environment later, run:"
-echo "source skin_env/bin/activate"
+
+# echo "Setup complete. To activate the environment later, run:"
+# echo "source skin_env/bin/activate"
 
 
 # to make it executable later - use chmod +x setup.sh

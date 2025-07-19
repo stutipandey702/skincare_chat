@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html>
-<head><title>Chatbot</title></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Skincare Chatbot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
 <body>
-  <h1>Chat with TinyLlama</h1>
-  <form method="post">
-    <input type="text" name="user_input" placeholder="Ask something..." required />
-    <input type="submit" value="Send" />
-  </form>
-  {% if response %}
-    <p><strong>Bot:</strong> {{ response }}</p>
-  {% endif %}
+  <div class="chat-container">
+    <h1>Ask about any skincare ingredient!</h1>
+    <form method="post">
+      <input type="text" name="user_input" placeholder="Ask something..." required />
+      <input type="submit" value="Send" />
+    </form>
+    {% if response %}
+      <p><strong>Bot:</strong> {{ response }}</p>
+    {% endif %}
+  </div>
 </body>
 </html>
