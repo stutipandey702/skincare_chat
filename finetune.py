@@ -3,7 +3,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, Trainer, TrainingA
 import torch
 
 # Load your JSONL dataset with prompt/response pairs
-dataset = load_dataset("json", data_files="cleaned_finetune_ingredient_dataset.jsonl", split="train")
+dataset = load_dataset("json", data_files="optimized_finetune_dataset.jsonl", split="train")
 
 # Format text combining prompt and response (adjust format as needed)
 def format_prompt(example):
@@ -40,6 +40,7 @@ training_args = TrainingArguments(
     dataloader_num_workers=8,                 # use all 8 CPU cores for data loading
     dataloader_pin_memory=False,              # no pinned memory on CPU
     report_to="none",
+    learning_rate=2e-4
 )
 
 trainer = Trainer(

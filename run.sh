@@ -11,4 +11,4 @@ echo "Activated VENV: $VIRTUAL_ENV"
 
 # Run Flask app
 echo "Starting Flask chatbot..."
-flask run -p 5001 --debug
+flask run -p 5001 --debugger
