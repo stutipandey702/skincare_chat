@@ -17,6 +17,7 @@ EXPOSE 8080
 # Set environment variables (optional: can be overridden at runtime)
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
+ENV FLASK_RUN_PORT=7860
 
 # Run the Flask app
 CMD ["flask", "run"]
