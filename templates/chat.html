@@ -1,13 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Chat</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
 <div class="chat-container">
- <div class="chat-history" id="chat-history">
-  {% for entry in chat_history %}
-    <div class="{{ 'user-message' if entry.from_user else 'bot-message' }}">
-      {{ entry.text }}
-    </div>
-  {% else %}
-    <p>No messages yet.</p>
-  {% endfor %}
-</div>
+  <div class="chat-history" id="chat-history">
+    {% if chat_history %}
+      {% for entry in chat_history %}
+        <div class="{{ 'user-message' if entry.from_user else 'bot-message' }}">
+          {{ entry.text }}
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>No messages yet.</p>
+    {% endif %}
+  </div>
 
   <form method="post" id="ingredient-form" class="input-area">
     <input
@@ -21,3 +30,4 @@
     <input type="submit" value="Send" />
   </form>
 </div>
+</html>
