@@ -2,3 +2,4 @@
 __pycache__/
 skin_env/
 venv/
+nltk_data/

@@ -5,7 +5,15 @@ import nltk
 import re
 from nltk.tokenize import sent_tokenize
 
-nltk.download('punkt')
+
+# Set a writable directory inside your container
+NLTK_DATA_DIR = os.path.join(os.path.dirname(__file__), "nltk_data")
+os.makedirs(NLTK_DATA_DIR, exist_ok=True)
+
+# Set the nltk data path
+nltk.data.path.append(NLTK_DATA_DIR)
+nltk.download('punkt', download_dir=NLTK_DATA_DIR)
+
 
 app = Flask(__name__)
 app.secret_key = 'supersecretkey123'
