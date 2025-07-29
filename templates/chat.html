@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chat</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-history" id="chat-history">
+      {% if chat_history %}
+        {% for entry in chat_history %}
+          <div class="{{ 'user-message' if entry.from_user else 'bot-message' }}">
+            {{ entry.text }}
+          </div>
+        {% endfor %}
+      {% else %}
+        <p>No messages yet.</p>
+      {% endif %}
+    </div>
+
+    <form method="post" id="ingredient-form" class="input-area">
+      <input
+        type="text"
+        name="user_input"
+        id="user_input"
+        placeholder="Type a skincare ingredient..."
+        autocomplete="off"
+        required
+      />
+      <input type="submit" value="Send" />
+    </form>
+  </div>
+</body>
+</html>
