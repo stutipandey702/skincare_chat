@@ -7,6 +7,8 @@ import re
 app = Flask(__name__)
 app.secret_key = 'supersecretkey123'
 
+port = int(os.environ.get("PORT", 7860))
+
 HF_API_TOKEN = os.getenv("HF_API_TOKEN")
 ENDPOINT_URL = os.getenv("ENDPOINT_URL")
 
@@ -47,4 +49,4 @@ def index():
     return render_template("chat.html", chat_history=session.get('chat_history', []))
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=7860)
+    app.run(host="0.0.0.0", port=port)
