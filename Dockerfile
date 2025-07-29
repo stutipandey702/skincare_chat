@@ -10,8 +10,6 @@ COPY . /app
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Download NLTK data needed by your app
-RUN python -m nltk.downloader punkt
 
 # Expose the port your Flask app runs on
 EXPOSE 8080
