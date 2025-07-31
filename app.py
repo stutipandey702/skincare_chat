@@ -1,3 +1,6 @@
+import os
+os.environ["TRANSFORMERS_CACHE"] = "/data/cache"
+
 from flask import Flask, request, jsonify, render_template
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
