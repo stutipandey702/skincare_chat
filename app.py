@@ -1,50 +1,46 @@
-from flask import Flask, request, render_template, session
-import os
-import requests
-import re
-
+from flask import Flask, request, jsonify, render_template
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import torch
 
 app = Flask(__name__)
-app.secret_key = 'supersecretkey123'
 
-HF_API_TOKEN = os.getenv("HF_API_TOKEN")
-ENDPOINT_URL = os.getenv("ENDPOINT_URL")
+# Load the model and tokenizer directly from skinchat  model repo
+MODEL_NAME = "stutipandey/llama_skinchat_lora"
 
-def clean_response(raw_response):
-    text = re.sub(r'(#+\s*Answer:)', '', raw_response, flags=re.IGNORECASE)
-    text = re.sub(r'\s+', ' ', text).strip()
-    sentences = sent_tokenize(text)
-    return ' '.join(sentences[:2])
+tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+model = AutoModelForCausalLM.from_pretrained(
+    MODEL_NAME,
+    torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+    device_map="auto"
+)
+model.eval()
 
-def query_model(prompt):
-    headers = {
-        "Authorization": f"Bearer {HF_API_TOKEN}",
-        "Content-Type": "application/json"
-    }
-    payload = {
-        "inputs": prompt,
-        "parameters": {"max_new_tokens": 200, "temperature": 0.7}
-    }
-    response = requests.post(ENDPOINT_URL, headers=headers, json=payload)
-    if response.status_code == 200:
-        return clean_response(response.json()['generated_text'])
-    else:
-        print(f"Error {response.status_code}: {response.text}")
-        return "Error querying model."
 
-@app.route("/", methods=["GET", "POST"])
-def index():
-    if 'chat_history' not in session:
-        session['chat_history'] = []
+@app.route("/")
+def home():
+    return render_template("index.html")
 
-    if request.method == "POST":
-        user_input = request.form["user_input"]
-        bot_response = query_model(user_input)
-        session['chat_history'].append({'from_user': True, 'text': user_input})
-        session['chat_history'].append({'from_user': False, 'text': bot_response})
-        session.modified = True
 
-    return render_template("chat.html", chat_history=session.get('chat_history', []))
+@app.route("/ask", methods=["POST"])
+def ask():
+    data = request.get_json()
+    prompt = data.get("prompt", "")
+    if not prompt:
+        return jsonify({"error": "No prompt provided"}), 400
+
+    inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+    outputs = model.generate(
+        **inputs,
+        max_new_tokens=200,
+        do_sample=True,
+        temperature=0.7,
+        top_p=0.9,
+        eos_token_id=tokenizer.eos_token_id
+    )
+    response_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    return jsonify({"response": response_text})
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=7860)
+
