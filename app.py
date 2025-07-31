@@ -9,19 +9,11 @@ import torch
 
 app = Flask(__name__)
 
-extract_path = "/tmp/llama_skinchat_lora"
-zip_path = "skinchat_snapshot.zip"
-os.makedirs(extract_path, exist_ok=True)
+# Load your model
+model_id = "stutipandey/llama_skinchat_lora"  # your repo
+tokenizer = AutoTokenizer.from_pretrained(model_id)
+model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32)
 
-with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-    zip_ref.extractall(extract_path)
-
-tokenizer = AutoTokenizer.from_pretrained(extract_path)
-model = AutoModelForCausalLM.from_pretrained(
-    extract_path,
-    torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
-    device_map="auto"
-)
 model.eval()
 
 
