@@ -1,12 +1,14 @@
 import zipfile
 import os
-os.environ["TRANSFORMERS_CACHE"] = "/data/cache"
+os.environ["TRANSFORMERS_CACHE"] = "/tmp/cache"
+os.environ["HF_HOME"] = "/tmp/cache"
 
 from flask import Flask, request, jsonify, render_template
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 
 app = Flask(__name__)
+
 
 # Only if not already extracted
 if not os.path.exists("llama_skinchat_lora"):
