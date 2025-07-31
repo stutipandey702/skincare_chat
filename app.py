@@ -10,8 +10,11 @@ import torch
 app = Flask(__name__)
 
 extract_path = "/tmp/llama_skinchat_lora"
+zip_path = "skinchat_snapshot.zip"
 os.makedirs(extract_path, exist_ok=True)
-zip_ref.extractall(extract_path)
+
+with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+    zip_ref.extractall(extract_path)
 
 tokenizer = AutoTokenizer.from_pretrained(extract_path)
 model = AutoModelForCausalLM.from_pretrained(
