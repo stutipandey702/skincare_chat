@@ -9,18 +9,13 @@ import torch
 
 app = Flask(__name__)
 
+extract_path = "/tmp/llama_skinchat_lora"
+os.makedirs(extract_path, exist_ok=True)
+zip_ref.extractall(extract_path)
 
-# Only if not already extracted
-if not os.path.exists("llama_skinchat_lora"):
-    with zipfile.ZipFile("skinchat_snapshot.zip", "r") as zip_ref:
-        zip_ref.extractall(".")
-
-# Load the model and tokenizer directly from skinchat model repo
-MODEL_NAME = "stutipandey/llama_skinchat_lora"
-
-tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+tokenizer = AutoTokenizer.from_pretrained(extract_path)
 model = AutoModelForCausalLM.from_pretrained(
-    MODEL_NAME,
+    extract_path,
     torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
     device_map="auto"
 )
