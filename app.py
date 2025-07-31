@@ -1,3 +1,4 @@
+import zipfile
 import os
 os.environ["TRANSFORMERS_CACHE"] = "/data/cache"
 
@@ -7,7 +8,12 @@ import torch
 
 app = Flask(__name__)
 
-# Load the model and tokenizer directly from skinchat  model repo
+# Only if not already extracted
+if not os.path.exists("llama_skinchat_lora"):
+    with zipfile.ZipFile("llama_skinchat_lora.zip", "r") as zip_ref:
+        zip_ref.extractall(".")
+
+# Load the model and tokenizer directly from skinchat model repo
 MODEL_NAME = "stutipandey/llama_skinchat_lora"
 
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
