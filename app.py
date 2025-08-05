@@ -1,26 +1,24 @@
-import zipfile
-import os
-os.environ["TRANSFORMERS_CACHE"] = "/tmp/cache"
-os.environ["HF_HOME"] = "/tmp/cache"
-
 from flask import Flask, request, jsonify, render_template
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
+import os
+
+os.environ["TRANSFORMERS_CACHE"] = "/tmp/cache"
+os.environ["HF_HOME"] = "/tmp/cache"
 
 app = Flask(__name__)
 
-# Load your model
-model_id = "stutipandey/llama_skinchat_lora"  # your repo
+model_id = "stutipandey/llama_skinchat_lora"
 tokenizer = AutoTokenizer.from_pretrained(model_id)
-model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32)
-
+model = AutoModelForCausalLM.from_pretrained(
+    model_id,
+    torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32
+)
 model.eval()
-
 
 @app.route("/")
 def home():
     return render_template("chat.html")
-
 
 @app.route("/ask", methods=["POST"])
 def ask():
@@ -41,7 +39,5 @@ def ask():
     response_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
     return jsonify({"response": response_text})
 
-
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=7860)
-
