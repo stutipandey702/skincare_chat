@@ -1,12 +1,14 @@
-from flask import Flask, request, jsonify, render_template
-from transformers import AutoModelForCausalLM, AutoTokenizer
-import torch
 import os
 
 os.environ["TRANSFORMERS_CACHE"] = "/tmp/cache"
 os.environ["HF_HOME"] = "/tmp/cache"
 os.environ["HF_DATASETS_CACHE"] = "/tmp/cache"
 os.environ["HF_METRICS_CACHE"] = "/tmp/cache"
+
+
+from flask import Flask, request, jsonify, render_template
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import torch
 
 app = Flask(__name__)
 
