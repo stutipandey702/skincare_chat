@@ -1,26 +1,25 @@
 import os
-
-os.environ["TRANSFORMERS_CACHE"] = "/tmp/cache"
-
-# Set Hugging Face cache directory (new method)
-os.environ["HF_HOME"] = "/tmp/hf_cache_lora"
-os.environ["HF_DATASETS_CACHE"] = "/tmp/hf_cache_lora"
-os.environ["HF_METRICS_CACHE"] = "/tmp/hf_cache_lora"
-os.makedirs("/tmp/hf_cache_lora", exist_ok=True)
-
-
 from flask import Flask, request, jsonify, render_template
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoTokenizer, AutoModelForCausalLM
+from peft import PeftModel
 import torch
+
+# Fix cache issues
+os.environ["HF_HOME"] = "/tmp/hf_cache_lora"
+os.makedirs("/tmp/hf_cache_lora", exist_ok=True)
 
 app = Flask(__name__)
 
-model_id = "stutipandey/llama_skinchat_lora"
-tokenizer = AutoTokenizer.from_pretrained(model_id)
-model = AutoModelForCausalLM.from_pretrained(
-    model_id,
+# Load base + LoRA
+base_model_id = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"  # or the base you fine-tuned
+lora_model_id = "stutipandey/llama_skinchat_lora"
+
+tokenizer = AutoTokenizer.from_pretrained(base_model_id)
+base_model = AutoModelForCausalLM.from_pretrained(
+    base_model_id,
     torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32
 )
+model = PeftModel.from_pretrained(base_model, lora_model_id)
 model.eval()
 
 @app.route("/")
