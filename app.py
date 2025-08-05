@@ -5,6 +5,8 @@ import os
 
 os.environ["TRANSFORMERS_CACHE"] = "/tmp/cache"
 os.environ["HF_HOME"] = "/tmp/cache"
+os.environ["HF_DATASETS_CACHE"] = "/tmp/cache"
+os.environ["HF_METRICS_CACHE"] = "/tmp/cache"
 
 app = Flask(__name__)
 
