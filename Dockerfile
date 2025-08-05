@@ -4,20 +4,12 @@ FROM python:3.9-slim
 # Set working directory inside the container
 WORKDIR /app
 
-# Copy application files
-COPY . /app
-
-# Create and set up Hugging Face cache directory
-RUN mkdir -p /tmp/hf_cache_lora
-ENV HF_HOME=/tmp/hf_cache_lora \
-    TRANSFORMERS_CACHE=/tmp/hf_cache_lora \
-    HF_DATASETS_CACHE=/tmp/hf_cache_lora \
-    HF_METRICS_CACHE=/tmp/hf_cache_lora
-
 # Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.txt .
+RUN pip install -r requirements.txt
 
 # Expose the port your Flask app will run on
+COPY . .
 EXPOSE 7860
 
 # Set environment variables for Flask
