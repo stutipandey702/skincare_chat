@@ -1,40 +1,56 @@
 import os
-import tempfile
+import sys
+
+# CRITICAL: Set ALL cache environment variables BEFORE importing transformers
+os.environ["HF_HOME"] = "/app/hf_cache"
+os.environ["TRANSFORMERS_CACHE"] = "/app/hf_cache"
+os.environ["HF_HUB_CACHE"] = "/app/hf_cache"
+os.environ["HUGGINGFACE_HUB_CACHE"] = "/app/hf_cache"
+os.environ["HF_DATASETS_CACHE"] = "/app/hf_cache"
+
+# Create cache directory if it doesn't exist
+cache_dir = "/app/hf_cache"
+os.makedirs(cache_dir, exist_ok=True)
+
+# Try to set permissions (ignore errors in case of restrictions)
+try:
+    os.chmod(cache_dir, 0o777)
+    print(f"✅ Cache directory created at: {cache_dir}")
+except:
+    print(f"⚠️ Could not set permissions on: {cache_dir}")
+
 from flask import Flask, request, jsonify, render_template
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import PeftModel
 import torch
 
-# Force HF to use a writable directory
-os.environ["HF_HOME"] = "/app"
-os.environ["TRANSFORMERS_CACHE"] = "/app"
-os.environ["HF_HUB_CACHE"] = "/app"
-
 app = Flask(__name__)
 
-def download_model_to_app_dir():
-    """Download model directly to /app directory"""
+def load_models_with_custom_cache():
+    """Load models with explicit cache directory"""
     base_model_id = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
     lora_model_id = "stutipandey/llama_skinchat_lora"
     
-    print("Loading tokenizer...")
+    print("Loading tokenizer with custom cache...")
     tokenizer = AutoTokenizer.from_pretrained(
         base_model_id,
-        cache_dir="/app/tokenizer_cache",
-        local_files_only=False,
-        trust_remote_code=True
+        cache_dir=cache_dir,
+        trust_remote_code=True,
+        use_fast=False  # Use slow tokenizer to avoid additional cache issues
     )
     
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
+        tokenizer.pad_token_id = tokenizer.eos_token_id
     
-    print("Loading base model...")
+    print("Loading base model with custom cache...")
     base_model = AutoModelForCausalLM.from_pretrained(
         base_model_id,
-        cache_dir="/app/model_cache",
+        cache_dir=cache_dir,
         torch_dtype=torch.float32,
         trust_remote_code=True,
-        local_files_only=False
+        low_cpu_mem_usage=True,
+        device_map=None
     )
     
     print("Loading LoRA adapter...")
@@ -43,23 +59,38 @@ def download_model_to_app_dir():
     
     return tokenizer, model
 
+def load_fallback_model():
+    """Fallback to a simpler model if TinyLlama fails"""
+    print("🔄 Loading fallback model (GPT-2)...")
+    
+    tokenizer = AutoTokenizer.from_pretrained(
+        "gpt2",
+        cache_dir=cache_dir
+    )
+    tokenizer.pad_token = tokenizer.eos_token
+    
+    model = AutoModelForCausalLM.from_pretrained(
+        "gpt2",
+        cache_dir=cache_dir
+    )
+    
+    return tokenizer, model
+
 # Try to load models
+print("🚀 Starting model loading...")
 try:
-    tokenizer, model = download_model_to_app_dir()
-    print("✅ Models loaded successfully!")
+    tokenizer, model = load_models_with_custom_cache()
+    model_type = "TinyLlama + LoRA"
+    print("✅ TinyLlama + LoRA loaded successfully!")
 except Exception as e:
-    print(f"❌ Error loading models: {e}")
-    # Emergency fallback - use a tiny model that's more reliable
-    print("🔄 Trying fallback model...")
+    print(f"❌ TinyLlama failed: {e}")
     try:
-        tokenizer = AutoTokenizer.from_pretrained("gpt2", cache_dir="/app")
-        if tokenizer.pad_token is None:
-            tokenizer.pad_token = tokenizer.eos_token
-        model = AutoModelForCausalLM.from_pretrained("gpt2", cache_dir="/app")
-        print("✅ Fallback model loaded!")
+        tokenizer, model = load_fallback_model()
+        model_type = "GPT-2 Fallback"
+        print("✅ GPT-2 fallback loaded successfully!")
     except Exception as fallback_error:
-        print(f"❌ Even fallback failed: {fallback_error}")
-        raise fallback_error
+        print(f"❌ Complete failure: {fallback_error}")
+        sys.exit(1)
 
 @app.route("/")
 def home():
@@ -74,7 +105,18 @@ def ask():
         if not prompt:
             return jsonify({"error": "No prompt provided"}), 400
         
-        inputs = tokenizer(prompt, return_tensors="pt", truncation=True, max_length=512)
+        # Format prompt based on model type
+        if "TinyLlama" in model_type:
+            formatted_prompt = f"<|system|>\nYou are a helpful assistant.</s>\n<|user|>\n{prompt}</s>\n<|assistant|>\n"
+        else:
+            formatted_prompt = prompt
+        
+        inputs = tokenizer(
+            formatted_prompt, 
+            return_tensors="pt", 
+            truncation=True,
+            max_length=512
+        )
         
         with torch.no_grad():
             outputs = model.generate(
@@ -84,23 +126,35 @@ def ask():
                 temperature=0.7,
                 top_p=0.9,
                 pad_token_id=tokenizer.pad_token_id,
-                eos_token_id=tokenizer.eos_token_id
+                eos_token_id=tokenizer.eos_token_id,
+                repetition_penalty=1.1
             )
         
         response_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
         
-        # Remove input prompt from response
-        if response_text.startswith(prompt):
-            response_text = response_text[len(prompt):].strip()
+        # Clean up response
+        if "TinyLlama" in model_type and "<|assistant|>" in response_text:
+            response_text = response_text.split("<|assistant|>")[-1].strip()
+        elif response_text.startswith(formatted_prompt):
+            response_text = response_text[len(formatted_prompt):].strip()
         
-        return jsonify({"response": response_text})
+        return jsonify({
+            "response": response_text,
+            "model_used": model_type
+        })
         
     except Exception as e:
-        return jsonify({"error": f"Generation error: {str(e)}"}), 500
+        print(f"Error in generation: {e}")
+        return jsonify({"error": f"Generation failed: {str(e)}"}), 500
 
 @app.route("/health")
 def health():
-    return jsonify({"status": "healthy"})
+    return jsonify({
+        "status": "healthy",
+        "model": model_type,
+        "cache_dir": cache_dir
+    })
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=7860)
+    print(f"🎉 Server starting with {model_type}")
+    app.run(host="0.0.0.0", port=7860, debug=False)
