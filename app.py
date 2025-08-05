@@ -1,12 +1,13 @@
 import os
-from flask import Flask, request, jsonify, render_template
-from transformers import AutoTokenizer, AutoModelForCausalLM
-from peft import PeftModel
-import torch
 
 # Fix cache issues
 os.environ["HF_HOME"] = "/tmp/hf_cache_lora"
 os.makedirs("/tmp/hf_cache_lora", exist_ok=True)
+
+from flask import Flask, request, jsonify, render_template
+from transformers import AutoTokenizer, AutoModelForCausalLM
+from peft import PeftModel
+import torch
 
 app = Flask(__name__)
 
