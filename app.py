@@ -1,9 +1,12 @@
 import os
 
 os.environ["TRANSFORMERS_CACHE"] = "/tmp/cache"
-os.environ["HF_HOME"] = "/tmp/cache"
-os.environ["HF_DATASETS_CACHE"] = "/tmp/cache"
-os.environ["HF_METRICS_CACHE"] = "/tmp/cache"
+
+# Set Hugging Face cache directory (new method)
+os.environ["HF_HOME"] = "/tmp/hf_cache_lora"
+os.environ["HF_DATASETS_CACHE"] = "/tmp/hf_cache_lora"
+os.environ["HF_METRICS_CACHE"] = "/tmp/hf_cache_lora"
+os.makedirs("/tmp/hf_cache_lora", exist_ok=True)
 
 
 from flask import Flask, request, jsonify, render_template
