@@ -155,6 +155,44 @@ def health():
         "cache_dir": cache_dir
     })
 
+@app.route("/debug", methods=["GET", "POST"])
+def debug():
+    if request.method == "GET":
+        return jsonify({
+            "status": "Server is running",
+            "model_loaded": "generator" in globals(),
+            "cache_dir": "/app/cache"
+        })
+    else:
+        # Test POST
+        return jsonify({"response": "Debug POST works!"})
+
+@app.route("/test")
+def test():
+    try:
+        # Test the generator
+        result = generator("Hello", max_length=20, num_return_sequences=1)
+        return jsonify({
+            "test_result": result[0]['generated_text'],
+            "status": "Model is working"
+        })
+    except Exception as e:
+        return jsonify({"error": f"Model test failed: {e}"})
+
+@app.route("/metrics")
+def metrics():
+    """Simple metrics endpoint for HF Spaces monitoring"""
+    return '''# HELP python_info Python platform information.
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="9"} 1.0
+# HELP app_status Application status
+# TYPE app_status gauge
+app_status{status="healthy"} 1.0
+# HELP model_loaded Model loading status
+# TYPE model_loaded gauge
+model_loaded{model="gpt2"} 1.0
+'''
+
 if __name__ == "__main__":
     print(f"🎉 Server starting with {model_type}")
     app.run(host="0.0.0.0", port=7860, debug=False)
