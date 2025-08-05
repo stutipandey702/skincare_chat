@@ -15,7 +15,6 @@
     <form id="ingredient-form" class="input-area">
       <input
         type="text"
-        name="user_input"
         id="user_input"
         placeholder="Type a skincare ingredient..."
         autocomplete="off"
@@ -28,7 +27,6 @@
   <script>
     document.getElementById("ingredient-form").addEventListener("submit", async (e) => {
       e.preventDefault();
-
       const userInput = document.getElementById("user_input").value;
 
       const response = await fetch("/ask", {
@@ -40,7 +38,8 @@
       });
 
       const data = await response.json();
-      document.getElementById("chat-log").innerText = data.response || data.error;
+      const chatLog = document.getElementById("chat-log");
+      chatLog.innerText = "Model: " + (data.response || data.error);
     });
   </script>
 </body>
