@@ -9,18 +9,10 @@
 <body>
   <div class="chat-container">
     <div class="chat-history" id="chat-history">
-      {% if chat_history %}
-        {% for entry in chat_history %}
-          <div class="{{ 'user-message' if entry.from_user else 'bot-message' }}">
-            {{ entry.text }}
-          </div>
-        {% endfor %}
-      {% else %}
-        <p>No messages yet.</p>
-      {% endif %}
+      <p id="chat-log">No messages yet.</p>
     </div>
 
-    <form method="post" id="ingredient-form" class="input-area">
+    <form id="ingredient-form" class="input-area">
       <input
         type="text"
         name="user_input"
@@ -32,5 +24,24 @@
       <input type="submit" value="Send" />
     </form>
   </div>
+
+  <script>
+    document.getElementById("ingredient-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const userInput = document.getElementById("user_input").value;
+
+      const response = await fetch("/ask", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ prompt: userInput })
+      });
+
+      const data = await response.json();
+      document.getElementById("chat-log").innerText = data.response || data.error;
+    });
+  </script>
 </body>
 </html>
