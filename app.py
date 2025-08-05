@@ -1,40 +1,56 @@
 import os
-import tempfile
+import shutil
 import time
 from flask import Flask, request, jsonify, render_template
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import PeftModel
 import torch
 
-# Create a proper cache directory
-cache_dir = tempfile.mkdtemp(prefix="hf_cache_")
-os.environ["HF_HOME"] = cache_dir
-# Also set the old env var for compatibility
-os.environ["TRANSFORMERS_CACHE"] = cache_dir
+# Remove any existing cache and environment variables
+if "HF_HOME" in os.environ:
+    del os.environ["HF_HOME"]
+if "TRANSFORMERS_CACHE" in os.environ:
+    del os.environ["TRANSFORMERS_CACHE"]
+
+# Clean up any existing cache
+cache_paths = ["/tmp/hf_cache_lora", "/root/.cache/huggingface", "/home/.cache/huggingface"]
+for path in cache_paths:
+    if os.path.exists(path):
+        try:
+            shutil.rmtree(path)
+        except:
+            pass
 
 app = Flask(__name__)
 
 def load_model_with_retry(model_id, model_type="tokenizer", max_retries=3):
-    """Load model with retry mechanism for permission errors"""
+    """Load model with retry mechanism and force download"""
     for attempt in range(max_retries):
         try:
             if model_type == "tokenizer":
                 return AutoTokenizer.from_pretrained(
                     model_id,
                     trust_remote_code=True,
-                    use_fast=True
+                    use_fast=True,
+                    force_download=True,  # Force fresh download
+                    resume_download=False,  # Don't resume partial downloads
+                    local_files_only=False  # Always try to download
                 )
             elif model_type == "model":
                 return AutoModelForCausalLM.from_pretrained(
                     model_id,
                     torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
                     trust_remote_code=True,
-                    device_map="auto" if torch.cuda.is_available() else None
+                    device_map="auto" if torch.cuda.is_available() else None,
+                    force_download=True,  # Force fresh download
+                    resume_download=False,  # Don't resume partial downloads
+                    local_files_only=False  # Always try to download
                 )
-        except OSError as e:
-            if "PermissionError" in str(e) and attempt < max_retries - 1:
-                print(f"Attempt {attempt + 1} failed, retrying in 5 seconds...")
-                time.sleep(5)
+        except Exception as e:
+            print(f"Attempt {attempt + 1} failed with error: {e}")
+            if attempt < max_retries - 1:
+                print(f"Retrying in 10 seconds...")
+                time.sleep(10)
                 continue
             else:
                 raise e
