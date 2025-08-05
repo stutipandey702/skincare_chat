@@ -11,7 +11,7 @@ os.makedirs("/tmp/hf_cache_lora", exist_ok=True)
 app = Flask(__name__)
 
 # Load base + LoRA
-base_model_id = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"  # or the base you fine-tuned
+base_model_id = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"  # the base fine-tuned
 lora_model_id = "stutipandey/llama_skinchat_lora"
 
 tokenizer = AutoTokenizer.from_pretrained(base_model_id)
