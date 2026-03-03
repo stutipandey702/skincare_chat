@@ -1,15 +1,16 @@
 import os
-import sys
 
 # CRITICAL: Set ALL cache environment variables BEFORE importing transformers
-os.environ["HF_HOME"] = "/app/hf_cache"
-os.environ["TRANSFORMERS_CACHE"] = "/app/hf_cache"
-os.environ["HF_HUB_CACHE"] = "/app/hf_cache"
-os.environ["HUGGINGFACE_HUB_CACHE"] = "/app/hf_cache"
-os.environ["HF_DATASETS_CACHE"] = "/app/hf_cache"
+_cache_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "hf_cache")
+
+os.environ["HF_HOME"] = _cache_dir
+os.environ["TRANSFORMERS_CACHE"] = _cache_dir
+os.environ["HF_HUB_CACHE"] = _cache_dir
+os.environ["HUGGINGFACE_HUB_CACHE"] = _cache_dir
+os.environ["HF_DATASETS_CACHE"] = _cache_dir
 
 # Create cache directory if it doesn't exist
-cache_dir = "/app/hf_cache"
+cache_dir = _cache_dir
 os.makedirs(cache_dir, exist_ok=True)
 
 # Try to set permissions (ignore errors in case of restrictions)
@@ -137,6 +138,12 @@ def ask():
             response_text = response_text.split("<|assistant|>")[-1].strip()
         elif response_text.startswith(formatted_prompt):
             response_text = response_text[len(formatted_prompt):].strip()
+
+        import re
+        sentences = re.split(r'(?<=[.!?])\s+', response_text)
+        if sentences and not response_text.rstrip().endswith(('.', '!', '?')):
+            sentences = sentences[:-1]  # drop the incomplete last sentence
+        response_text = " ".join(sentences)
         
         return jsonify({
             "response": response_text,

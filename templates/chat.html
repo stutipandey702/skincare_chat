@@ -25,22 +25,60 @@
   </div>
 
   <script>
-    document.getElementById("ingredient-form").addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const userInput = document.getElementById("user_input").value;
+  document.getElementById("ingredient-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
 
+    const input = document.getElementById("user_input");
+    const userInput = input.value.trim();
+    if (!userInput) return;
+
+    const chatHistory = document.getElementById("chat-history");
+
+    // Remove placeholder on first message
+    const placeholder = document.getElementById("chat-log");
+    if (placeholder) placeholder.remove();
+
+    // Show user message
+    const userMsg = document.createElement("p");
+    userMsg.innerText = "You: " + userInput;
+    userMsg.style.fontWeight = "bold";
+    chatHistory.appendChild(userMsg);
+
+    // Clear input box immediately
+    input.value = "";
+
+    // Show loading indicator
+    const loading = document.createElement("p");
+    loading.id = "loading";
+    loading.innerText = "🫧 Thinking...";
+    loading.style.fontStyle = "italic";
+    loading.style.opacity = "0.6";
+    chatHistory.appendChild(loading);
+    chatHistory.scrollTop = chatHistory.scrollHeight;
+
+    try {
       const response = await fetch("/ask", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt: userInput })
       });
 
       const data = await response.json();
-      const chatLog = document.getElementById("chat-log");
-      chatLog.innerText = "Model: " + (data.response || data.error);
-    });
+      document.getElementById("loading")?.remove();
+
+      const botMsg = document.createElement("p");
+      botMsg.innerHTML = "<strong>Bot:</strong> " + (data.response || data.error || "No response");
+      chatHistory.appendChild(botMsg);
+      chatHistory.scrollTop = chatHistory.scrollHeight;
+
+    } catch (err) {
+      document.getElementById("loading")?.remove();
+      const errMsg = document.createElement("p");
+      errMsg.innerText = "Error: Could not reach server.";
+      errMsg.style.color = "red";
+      chatHistory.appendChild(errMsg);
+    }
+  });
   </script>
 </body>
 </html>
