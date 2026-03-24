@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "category": "ingredient_knowledge",
+    "question": "What does niacinamide do for the skin?",
+    "reference_answer": "Niacinamide (Vitamin B3) reduces pore appearance, controls sebum, brightens skin tone by inhibiting melanin transfer, strengthens the skin barrier, and has anti-inflammatory properties. Good for oily, acne-prone, and hyperpigmented skin."
+  },
+  {
+    "id": 2,
+    "category": "ingredient_knowledge",
+    "question": "What is the difference between retinol and retinoids?",
+    "reference_answer": "Retinoids is the umbrella term for all Vitamin A derivatives. Retinol is an OTC retinoid that converts to retinoic acid in skin — slower and gentler. Prescription retinoids like tretinoin are retinoic acid directly, making them stronger and faster-acting but more irritating."
+  },
+  {
+    "id": 3,
+    "category": "ingredient_knowledge",
+    "question": "What does salicylic acid do and what skin type is it best for?",
+    "reference_answer": "Salicylic acid is a BHA (beta hydroxy acid) that is oil-soluble, allowing it to penetrate pores and dissolve excess sebum and dead skin cells. Best for oily and acne-prone skin. It also has anti-inflammatory properties."
+  },
+  {
+    "id": 4,
+    "category": "ingredient_knowledge",
+    "question": "What is hyaluronic acid and how should it be applied?",
+    "reference_answer": "Hyaluronic acid is a humectant that can hold up to 1000x its weight in water, drawing moisture into the skin. Should be applied to damp skin and immediately followed with a moisturizer to seal in hydration. Otherwise it can draw moisture from deeper skin layers in dry environments."
+  },
+  {
+    "id": 5,
+    "category": "ingredient_knowledge",
+    "question": "What does glycolic acid do?",
+    "reference_answer": "Glycolic acid is an AHA (alpha hydroxy acid) with the smallest molecular size, allowing deep penetration. It exfoliates by dissolving the bonds between dead skin cells, improving texture, brightness, fine lines, and hyperpigmentation. Best used at night due to photosensitivity."
+  },
+  {
+    "id": 6,
+    "category": "ingredient_knowledge",
+    "question": "What is the role of ceramides in skincare?",
+    "reference_answer": "Ceramides are lipids naturally found in the skin barrier. They hold skin cells together and prevent moisture loss and irritant entry. Ceramide-containing products are especially beneficial for dry, sensitive, or compromised skin barriers (e.g. eczema)."
+  },
+  {
+    "id": 7,
+    "category": "ingredient_knowledge",
+    "question": "What does vitamin C do in skincare and what makes it unstable?",
+    "reference_answer": "Vitamin C (ascorbic acid) is an antioxidant that brightens skin, fades hyperpigmentation, boosts collagen synthesis, and protects against UV damage. It is unstable because it oxidizes when exposed to light, heat, and air — turning orange/brown when degraded. Should be stored in dark, airtight packaging."
+  },
+  {
+    "id": 8,
+    "category": "ingredient_knowledge",
+    "question": "What is the difference between physical and chemical sunscreen?",
+    "reference_answer": "Physical (mineral) sunscreens use zinc oxide or titanium dioxide to reflect UV rays. Chemical sunscreens absorb UV radiation and convert it to heat. Physical is gentler for sensitive skin but can leave a white cast. Chemical is more cosmetically elegant but may irritate sensitive skin."
+  },
+  {
+    "id": 9,
+    "category": "ingredient_interactions",
+    "question": "Can I use niacinamide and vitamin C together?",
+    "reference_answer": "Yes, they can be used together. The concern about them forming niacin and causing flushing is largely a myth at modern concentrations and stable formulations. In fact they complement each other well — both target hyperpigmentation and have antioxidant properties. Stable vitamin C derivatives like ascorbyl glucoside are especially compatible."
+  },
+  {
+    "id": 10,
+    "category": "ingredient_interactions",
+    "question": "Can I use retinol and vitamin C together?",
+    "reference_answer": "Not recommended in the same routine. Both are potent actives that can cause irritation when combined. Vitamin C works best at low pH (~3.5), while retinol is more stable at neutral pH — they can destabilize each other. Best practice: use Vitamin C in the morning, retinol at night."
+  },
+  {
+    "id": 11,
+    "category": "ingredient_interactions",
+    "question": "Can I use AHA/BHA with retinol?",
+    "reference_answer": "Generally not recommended in the same routine. Both are exfoliating/active ingredients and combining them can cause significant irritation, redness, and barrier damage. Use AHAs/BHAs on alternate nights from retinol, or use one in the morning and the other at night with caution."
+  },
+  {
+    "id": 12,
+    "category": "ingredient_interactions",
+    "question": "Can I layer hyaluronic acid with niacinamide?",
+    "reference_answer": "Yes, this is a very well-tolerated and effective combination. Hyaluronic acid provides hydration while niacinamide strengthens the barrier and regulates oil. They do not interfere with each other and are suitable for all skin types including sensitive skin."
+  },
+  {
+    "id": 13,
+    "category": "ingredient_interactions",
+    "question": "Can I use benzoyl peroxide with retinol?",
+    "reference_answer": "Not recommended together. Benzoyl peroxide can oxidize and deactivate retinol, rendering it less effective. Use benzoyl peroxide in the morning and retinol at night, or on alternating nights."
+  },
+  {
+    "id": 14,
+    "category": "ingredient_interactions",
+    "question": "Is it safe to use vitamin C with sunscreen?",
+    "reference_answer": "Yes, and it is actually recommended. Vitamin C in the morning routine boosts the protective effect of sunscreen against UV-induced free radical damage. Apply vitamin C serum first, let it absorb, then apply sunscreen on top."
+  },
+  {
+    "id": 15,
+    "category": "ingredient_interactions",
+    "question": "Can I use salicylic acid and niacinamide together?",
+    "reference_answer": "Yes, this is a beneficial combination for oily and acne-prone skin. Salicylic acid exfoliates and unclogs pores while niacinamide reduces inflammation and sebum production. They can be used in the same routine without significant interaction."
+  },
+  {
+    "id": 16,
+    "category": "breadth_routine",
+    "question": "What is the correct order to apply skincare products?",
+    "reference_answer": "General order: cleanser, toner, serums (thinnest to thickest), moisturizer, sunscreen (AM only). The rule of thumb is thinnest/most watery to thickest/most occlusive. Actives like vitamin C and niacinamide go before moisturizer; retinol goes after moisturizer to buffer irritation for beginners."
+  },
+  {
+    "id": 17,
+    "category": "breadth_routine",
+    "question": "What is skin cycling and how does it work?",
+    "reference_answer": "Skin cycling is a routine popularized for minimizing irritation from actives. Typical 4-night cycle: Night 1 — exfoliation (AHA/BHA), Night 2 — retinoid, Nights 3 & 4 — recovery (just moisturizer and barrier support). Allows skin to benefit from actives without over-exfoliating."
+  },
+  {
+    "id": 18,
+    "category": "breadth_routine",
+    "question": "What skincare routine would you recommend for someone with dry skin?",
+    "reference_answer": "A good dry skin routine focuses on hydration and barrier repair: gentle non-stripping cleanser, hydrating toner, hyaluronic acid serum applied to damp skin, rich moisturizer with ceramides and fatty acids, and SPF in the morning. Avoid harsh exfoliants and alcohol-based products."
+  },
+  {
+    "id": 19,
+    "category": "breadth_routine",
+    "question": "What skincare routine would you recommend for someone with oily acne-prone skin?",
+    "reference_answer": "Focus on gentle exfoliation and sebum control without over-stripping: gentle foaming cleanser, salicylic acid serum or toner, lightweight non-comedogenic moisturizer, and SPF. At night, consider retinol or benzoyl peroxide for acne. Avoid heavy oils and occlusive ingredients that can clog pores."
+  },
+  {
+    "id": 20,
+    "category": "breadth_routine",
+    "question": "How often should you exfoliate?",
+    "reference_answer": "Depends on the exfoliant and skin type. AHAs/BHAs: 2-3 times per week for most skin types, less for sensitive skin. Physical exfoliants: 1-2 times per week maximum. Over-exfoliating damages the skin barrier causing redness, sensitivity, and breakouts. Signs of over-exfoliation include tight, shiny, or stinging skin."
+  },
+  {
+    "id": 21,
+    "category": "breadth_concerns",
+    "question": "What ingredients are best for hyperpigmentation?",
+    "reference_answer": "Top ingredients: Vitamin C (inhibits melanin production), niacinamide (inhibits melanin transfer), alpha arbutin (tyrosinase inhibitor), kojic acid, tranexamic acid, and AHAs (accelerate cell turnover to fade dark spots). Retinoids also help by speeding up cell renewal. SPF is essential to prevent worsening."
+  },
+  {
+    "id": 22,
+    "category": "breadth_concerns",
+    "question": "What ingredients help with anti-aging?",
+    "reference_answer": "Most evidence-backed: retinoids (gold standard — stimulate collagen, increase cell turnover), vitamin C (antioxidant, collagen synthesis), peptides (signal collagen production), niacinamide, AHAs (improve texture and tone), and SPF (prevents photoaging, the #1 cause of premature aging)."
+  },
+  {
+    "id": 23,
+    "category": "breadth_concerns",
+    "question": "What ingredients should someone with sensitive skin avoid?",
+    "reference_answer": "Commonly irritating ingredients to avoid: fragrance (synthetic and natural), alcohol denat, essential oils (lavender, peppermint, citrus), harsh surfactants (SLS), physical scrubs, and high concentrations of actives like retinol, AHAs, and vitamin C. Patch testing new products is always recommended."
+  },
+  {
+    "id": 24,
+    "category": "breadth_concerns",
+    "question": "How do you treat fungal acne?",
+    "reference_answer": "Fungal acne (Malassezia folliculitis) is caused by yeast overgrowth, not bacteria. Treatment: antifungal products (zinc pyrithione, selenium sulfide, ketoconazole). Avoid fatty acids (especially C11-C24) and many oils that feed Malassezia. Ingredients like squalane, niacinamide, and salicylic acid are generally safe."
+  },
+  {
+    "id": 25,
+    "category": "breadth_concerns",
+    "question": "What is the skin barrier and how do you repair it?",
+    "reference_answer": "The skin barrier (stratum corneum) is the outermost layer that retains moisture and blocks irritants. A compromised barrier causes dryness, sensitivity, redness, and breakouts. To repair: stop all actives temporarily, use gentle cleanser, apply ceramide-rich moisturizer, and use occlusive ingredients like petrolatum or squalane. Allow 2-4 weeks."
+  },
+  {
+    "id": 26,
+    "category": "ingredient_interactions",
+    "question": "Can I use copper peptides with vitamin C or retinol?",
+    "reference_answer": "Copper peptides are generally not recommended with vitamin C (ascorbic acid) as the acid can deactivate the copper, and high concentrations of vitamin C can potentially interfere with copper peptide efficacy. With retinol, use with caution — some find them complementary for collagen but the combination can be irritating. Best to use on separate nights."
+  },
+  {
+    "id": 27,
+    "category": "ingredient_interactions",
+    "question": "Can I mix oils with my moisturizer?",
+    "reference_answer": "Yes, facial oils can generally be mixed with moisturizer or applied on top. Apply oils after water-based products and before or after moisturizer depending on thickness. Oils seal in hydration. Be cautious with comedogenic oils (coconut, flaxseed) if acne-prone. Non-comedogenic options: squalane, rosehip, jojoba."
+  },
+  {
+    "id": 28,
+    "category": "breadth_routine",
+    "question": "Do I still need moisturizer if I have oily skin?",
+    "reference_answer": "Yes. Oily skin still needs hydration — skipping moisturizer can cause the skin to overproduce sebum to compensate. Use a lightweight, oil-free, non-comedogenic moisturizer like a gel or fluid formula. Ingredients like hyaluronic acid and niacinamide hydrate without adding greasiness."
+  },
+  {
+    "id": 29,
+    "category": "breadth_concerns",
+    "question": "Why is SPF important and what SPF level should I use?",
+    "reference_answer": "SPF protects against UVB rays (sunburn) and combined with broad-spectrum coverage, UVA rays (aging, DNA damage). Dermatologists recommend minimum SPF 30 (blocks ~97% UVB), ideally SPF 50 for daily use. Should be reapplied every 2 hours with sun exposure. It is the single most impactful anti-aging product."
+  },
+  {
+    "id": 30,
+    "category": "ingredient_interactions",
+    "question": "Can I use lactic acid and retinol together?",
+    "reference_answer": "Not recommended in the same routine. Lactic acid (an AHA) lowers skin pH, which can increase retinol irritation. Using both together risks significant barrier disruption. Use lactic acid on exfoliation nights and retinol on separate nights, or follow a skin cycling approach."
+  }
+]

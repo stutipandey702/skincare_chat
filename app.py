@@ -26,15 +26,15 @@ app = Flask(__name__)
 if torch.backends.mps.is_available():
     DEVICE = torch.device("mps")
     DTYPE  = torch.float16        # float16 runs well on MPS
-    print("✅ Using Apple Silicon GPU (MPS) with float16")
+    print("Using Apple Silicon GPU (MPS) with float16")
 elif torch.cuda.is_available():
     DEVICE = torch.device("cuda")
     DTYPE  = torch.float16
-    print("✅ Using CUDA GPU with float16")
+    print("Using CUDA GPU with float16")
 else:
     DEVICE = torch.device("cpu")
     DTYPE  = torch.float32        # float16 can be unstable on CPU
-    print("⚠️  Falling back to CPU — inference will be slow")
+    print("Falling back to CPU — inference will be slow")
 
 
 def load_model():
@@ -66,7 +66,7 @@ def load_model():
     model = model.to(DEVICE)    # move to MPS/CUDA/CPU
     model.eval()
 
-    print(f"✅ Model loaded on {DEVICE}")
+    print(f"Model loaded on {DEVICE}")
     return tokenizer, model
 
 
@@ -75,7 +75,7 @@ try:
     tokenizer, model = load_model()
     model_type = "TinyLlama + LoRA"
 except Exception as e:
-    print(f"❌ Model load failed: {e}")
+    print(f"Model load failed: {e}")
     sys.exit(1)
 
 
@@ -111,7 +111,7 @@ def ask():
         return_tensors="pt",
         truncation=True,
         max_length=512,
-    ).to(DEVICE)               # inputs must be on same device as model
+    ).to(DEVICE)            # inputs must be on same device as model
 
     with torch.no_grad():
         outputs = model.generate(

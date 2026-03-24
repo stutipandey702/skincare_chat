@@ -1,0 +1,188 @@
+Hyaluronic Acid (Explained + Products)
+Products
+Ingredients
+Decode INCI
+Login
+Register
+Login
+Register
+Products
+Ingredients
+Decode INCI
+Follow us on our new Insta page »
+Hyaluronic Acid
+goodie
+What-it-does:
+skin-identical ingredient
+,
+moisturizer/humectant
+Official CosIng Information
+All Functions:
+antistatic, humectant, moisturising, skin conditioning
+CAS #:
+9004-61-9
+                     |
+EC #:
+232-678-0
+Chemical/IUPAC Name:
+Hyaluronic Acid
+Quick Facts
+It’s naturally in our skin and behaves there like a sponge
+It can bind up to 1000 times its own weight in water
+It is a big molecule from repeated subunits (polymer) so different molecular weight versions exist (unfortunately there is no way to determine MW from INCI list only)
+High-molecular-weight-HA (>500 kDa) is an excellent surface hydrator, skin protectant and can act as an osmotic pump helping water-soluble actives to penetrate deeper into the skin
+Low-molecular-weight-HA (< 500 kDa) can hydrate the skin somewhat deeper though it is still a big molecule and works mainly in the epidermis (outer layer of the skin)
+Low-molecular-weight-HA might also help the skin to repair itself by increasing its self-defense (~ 200kDa used in the study)
+Ultra-low-molecular-weight-HA (<50kDa) is a controversial ingredient and might work as a pro-inflammatory signal molecule
+[more]
+[less]
+Geeky Details
+Hyaluronic acid (HA) and its various forms are the
+current IT-moisturizer
+s. So let’s see, what is hyaluronic acid and even more importantly what’s the big deal about it?
+HA is a nice
+big sugar molecule
+from repeated subunits (polymer) that can be found naturally
+in our body
+. It’s the most dominant, and most important molecule in the liquidy stuff between our skin cells (the sciency name for it is the extracellular matrix or ECM). A 70 kg adult has about 15 g of HA in her body, and half of it is in the skin. Most of the skin HA is in the dermis (the deeper layer - about 0.5 mg/kg) but there is also some in the epidermis (the upper layer - about 0.1 mg/kg).
+Saying it’s a big molecule, doesn’t do it justice. By default, it’s a HUGE molecule. Its molecular weight can be up to 4 million Dalton (that is just the unit molecular weight is measured in). To compare, normal table sugar that you bake with has a molecular weight of 340 Dalton.
+Because HA is a polymer, its subunits can be repeated many times or just a few times and thus different molecular weight versions exist. There is not a super clear definition what counts as high molecular weight or low molecular weight, but it seems to be roughly like this:
+High molecular weight HA, or HMW-HA
+:  500k - 4M Dalton
+Low molecular weight HA, or LMW-HA
+:   500k Dalton and below.
+HMW-HA in the skin
+First, you have to know that this is the version that can mostly be found
+in our skin
+. So what does it do?
+Think of it as a
+sponge.
+HMW-HA has superstar water-binding abilities. It can
+bind 1000 times its own weight in water
+. Or to say it another way 1 gram of HA can bind up to 6 liters of water! That is a lot, and this makes HA pretty much the best water-binding ingredient we know today. It is really the sponge of our skin: it’s there in the outer layers and helps our skin immensely to attract and retain its water content.
+Not only that, but HA has lots of other
+important biological functions.
+Apart from hydration, the skin-related functions include maintaining the skin's elasticity, reducing the skin's inflammatory response, regenerating the damaged skin barrier and plumping up water-loss related wrinkles. Essentially, helping the skin to look and feel healthy and young.
+HMW-HA put on your face
+As for smearing
+HMW-HA
+all over our face, you have to know that most probably it
+does not penetrate the skin
+. There is a lonely study from 1999 that thinks that HA can absorb into the skin through some active transport mechanism, however, we could not find anything to confirm this.  What we could find is multiple expert opinions and newer studies that state HMW-HA is a huge molecule that stays on top of the skin to
+give surface hydration and to form a protective barrier
+.
+Not only that, but it can also work as an "osmotic pump", meaning it can be a
+penetration enhancer for water-soluble actives
+.
+As the cosmetic chemist at Realize Beauty puts it
+, HA can be an "
+osmotic delivery system
+that can push water-soluble actives deeper into the skin by forming a highly hydrated reservoir on the surface of the skin
+".
+LMW-HA in the skin
+The biological function of LMW-HA in the skin seems to be crazy complicated and different than that of HMW-HA. LMW-HA is mostly created when HMW-HA is chopped up into smaller pieces at sites of an injury and it is thought to be a
+pro-inflammatory signal molecule
+that says "danger, danger, bring on some inflammation and repair yourself".
+LMW-HA put on your face
+Based on LMW-HA's biological role, the question is logical: is LMW-HA pro-inflammatory when we smear it on? Well, it is a good question and we do not have the surefire answer. Most evidence points so far to a no, at least when it comes to molecular weights in the 50kDa and up range.
+First,
+LMW-HA is still a big-big molecule
+whose
+penetration is questionable
+. It might absorb a bit better than HMW-HA, but that still means working mostly in the epidermis, the uppermost layers of the skin.
+Second, we found multiple studies showing that
+LMW-HA can help the skin to repair itself
+. One study showed that 0.2% LMW-HA (~ 200kDa used in the study) increases the skin's self-defense and another two studies found LMW-HA (also in 0.2%) to be helpful for inflammation-related skin diseases such as rosacea and facial seborrheic dermatitis.
+Third, a manufacturer-related study (done by Evonik) found that HA versions with a molecular-weight of 50kDa and up do not induce inflammatory signals in the skin, however, the
+20kDa version did show some pro-inflammatory activity
+. Granted, this was done on reconstituted human epidermis, so it might or might not be like this on real human skin. BTW, they also found in-vivo (on real people) that the
+LMW-HA versions
+, especially the one with 50kDa MW
+can plump up wrinkles
+really good.
+So based on LMW-HA's biological role and the Evonik study, you
+might want to be careful with ultra-low molecular weights, the ones below 50kDa
+. However, this is also not a sure thing. We also saw manufacturer data showing that a 10kDa molecular weight HA version has better antioxidant activity than a 1.6MDa version and it also had better sun protection and after-sun repair abilities than the higher MW versions.
+We really cannot tell you the surefire answer. Our best guess is that if you are a cautious type, avoid the ultra-low MW versions, but "normal" LMW-HA seems to be all OK to us.
+Phweeew, that was really long and complicated, sorry for that. If you are still with us, congrats! You've just become a real HA-and-the-skin expert! :)
+[more]
+[more]
+[less]
+Something incorrect or missing?
+Let us know!
+Show me some proof
+Dermato-endocrinology, Jul  1, 2012, Hyaluronic acid: A key molecule in skin aging
+Journal of Drugs in Dermatology, January 2016, Rejuvenating Hydrator: Restoring Epidermal Hyaluronic Acid Homeostasis With Instant Benefits
+The Journal of investigative dermatology., 1999 Nov;113(5):740-6., Absorption of hyaluronan applied to the surface of intact skin.
+International Journal of Cosmetic Science, Volume 37 (4) –  Aug  1, 2015, Stability determination of the formulations containing hyaluronic acid
+Journal of immunology, 2008 Aug 1, Low Molecular Weight Hyaluronic Acid Increases the Self-Defense of Skin Epithelium by Induction of β-Defensin 2 via TLR2 and TLR4
+SOFW Journal, 11-2008, M. Farwick, P. Lersch, G. Strutz (Evonik), Low Molecular Weight Hyaluronic Acid: Its Effects on Epidermal Gene Expression and Skin Ageing
+Journal of drugs in dermatology : JDD., 2011 Sep;10(9):990-1000., Efficacy of cream-based novel formulations of hyaluronic acid of different molecular weights in anti-wrinkle treatment.
+The Journal of clinical and aesthetic dermatology., 2012 Oct;5(10):20-3., Efficacy and safety of a low-molecular weight hyaluronic Acid topical gel in the treatment of facial seborrheic dermatitis.
+Journal of drugs in dermatology : JDD., June 2013 | Volume 12 | Issue 6, Efficacy and Tolerability of Low Molecular Weight Hyaluronic Acid Sodium Salt 0.2% Cream in Rosacea
+Journal of theoretical biology,  1986 Mar 21;119(2):219-34., A model for the role of hyaluronic acid and fibrin in the early events during the inflammatory response and wound healing.
+The Journal of clinical investigation.,  1996 Nov 15;98(10):2403-13., Hyaluronan (HA) fragments induce chemokine gene expression in alveolar macrophages. The role of HA size and CD44
+American journal of respiratory cell and molecular biology, 2011 October, Hyaluronan fragments promote inflammation by down-regulating the anti-inflammatory A2a receptor
+Immunol Res. Author manuscript; available in PMC 2014 Jul 22., Tissue integrity signals communicated by high-molecular weight hyaluronan and the resolution of inflammation
+[more]
+[more]
+[less]
+Products with Hyaluronic Acid
+3AM Everyday Face Wash
+AGE 20's Nice Weather Calming Long Protection Sun Essence Pact SPF50+ Pa++++
+Advance skin care Mooyam
+Allies of Skin Bright Future Sleeping Facial
+Auli Plumpkin Skin Plumping Mousse Mango Pulp + Avocado Oil
+Bio soft Hyaluronic Acid Deep Conditioner
+CGG Cosmetics Hyaluronic Acid 2.5%- Vitamin C- E Facial Serum
+CJ Innerb Aqua Bank
+CLEARSTEM Skincare Cellrenew® - Collagen Stem Cell Serum
+Cetaphil Rich Hydrating Cream
+Cleo Youth
+Cutiswiss Hyaluronic Acid Niacinamide Cream
+Cutiswiss Swissaura Hyaluronic Acid Niacinamide Cream
+DermDoc Hydra Boost Body Lotion
+DermDoc Hydrolyzed Collagen Gel
+DermDoc Skin Tightening Face Cream With Hydrolyzed Collagen
+Derma 2.0 Bio Face Cream
+Dermaceutical  Skin Whitening & Anti Aging Serum
+Dermatique Lightening Hyaluronic Acid Serum
+Dewy Skincare Vitamin C Brightening Serum
+Dot & Key Hyaluronic & Ceramide Hydrating Shower Gel
+Dottore Cosmeceutici Peptide Xpress Sheet Face
+ENN Pucker Moisturizing Lip Mask
+Elizavecca Witch Piggy Hell-Pore Control Hyaluronic Acid 97%
+Facialista Replenishing Gel
+Farmacia Precizia Face Cream With Vitamins And Hialuronic Acid
+Fidia Farmaceutici Connetivina Stick
+Fidia Farmaceutici Connettivina Connettivina Stick Labbra
+Fidia Farmaceutici Connettivina Mani
+Fidia Farmaceutici Connettivina Plus Cream
+Globus Remedies Hyaluronic Acid Facewash
+Holika Holika Mascarilla Hyaluronic Acid
+Honest Glow Niacinamide Serum
+Hydroheal nova Cream
+Hygieia Crepe Repair Firming Cream For Neck & Skin
+Hylunia Nightly Renewal Serum
+Hymed Pure Hyaluronic Acid Serum For Face & Body
+IDS Recovery Serum
+Inblair Rejuvanate Face Serum
+Intraceuticals Retouch Serum - Eyes
+JJLabs Skincare Solution Copper Peptide Serum
+JJLabs Skincare Solution Peptide Complex Anti Aging Serum
+JJLabs Skincare Solution Skin Brightening & Anti Aging Serum
+JJLabs Skincare Solution Vitamin C Serum 20%
+KNC Beauty All Natural Retinol Infused Eye Mask
+Kazu Beauty Hyaluronic Acid & Cica Facial Serum
+Kiss Naturals Hydro Glow + Smooth & Even Serum
+Kmart Exfoliating Pads
+LE MIEUX CLINICAL Brightening
+LE MIEUX CLINICAL Cellpro Gf3
+Next page >>
+We do a Best of INCIDecoder email once a month with the most interesting products and ingredients we bump into.
+An error has occurred. Please try again later!
+Click below to subscribe:
+Thanks. :)  You are almost done: please check your mailbox to confirm your email!
+*INCI is a list of the standardized and internationally accepted names used in the declaration of ingredients on cosmetic and personal care products. It is published by the Personal Care Product Council.
+Copyright 2026 |
+About

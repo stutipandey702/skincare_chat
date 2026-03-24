@@ -1,0 +1,524 @@
+Family of waxy lipid molecules
+Ceramide. R represents the alkyl portion of a fatty acid.
+General structures of
+sphingolipids
+Ceramides
+are a family of
+waxy
+lipid
+molecules. A ceramide is composed of
+sphingosine
+and a
+fatty acid
+joined by an
+amide bond
+.  Ceramides are found in high concentrations within the
+cell membrane
+of
+eukaryotic
+cells, since they are component lipids that make up
+sphingomyelin
+, one of the major lipids in the
+lipid bilayer
+.
+[
+1
+]
+Contrary to previous assumptions that ceramides and other
+sphingolipids
+found in cell membrane were purely supporting structural elements, ceramide can participate in a variety of cellular
+signaling
+: examples include regulating
+differentiation
+,
+proliferation
+, and
+programmed cell death
+(PCD) of
+cells
+.
+The word
+ceramide
+comes from the Latin
+cera
+(
+wax
+) and
+amide
+. Ceramide is a component of
+vernix caseosa
+, the waxy or cheese-like white substance found coating the skin of newborn human infants.
+Pathways for ceramide synthesis
+[
+edit
+]
+There are three major pathways of ceramide generation.  First, the sphingomyelinase pathway uses an enzyme to break down sphingomyelin in the cell membrane and release ceramide.  Second, the
+de novo
+pathway creates ceramide from less complex molecules.  Third, in the "salvage" pathway, sphingolipids that are broken down into
+sphingosine
+are reused by
+reacylation
+to form ceramide.
+[
+citation needed
+]
+Sphingomyelin hydrolysis
+[
+edit
+]
+Hydrolysis
+of
+sphingomyelin
+is catalyzed by the enzyme
+sphingomyelinase
+. Because sphingomyelin is one of the four common
+phospholipids
+found in the
+plasma membrane
+of cells, the implications of this method of generating ceramide is that the cellular membrane is the target of extracellular signals leading to programmed cell death.  There has been research suggesting that when ionizing
+radiation
+causes
+apoptosis
+in some cells, the radiation leads to the activation of sphingomyelinase in the cell membrane and ultimately, to ceramide generation.
+[
+2
+]
+De novo
+[
+edit
+]
+De novo synthesis of ceramide begins with the condensation of
+palmitate
+and
+serine
+to form 3-keto-dihydrosphingosine. This reaction is catalyzed by the enzyme
+serine palmitoyl transferase
+and is the rate-limiting step of the pathway. In turn, 3-keto-dihydrosphingosine is reduced to
+dihydrosphingosine
+, which is then followed by acylation by the enzyme (dihydro)ceramide synthase to produce
+dihydroceramide
+. The final reaction to produce ceramide is catalyzed by
+dihydroceramide desaturase
+.  De novo synthesis of ceramide occurs in the
+endoplasmic reticulum
+. Ceramide is subsequently transported to the
+Golgi apparatus
+by either vesicular trafficking or the ceramide transfer protein CERT. Once in the Golgi apparatus, ceramide can be further metabolized to other
+sphingolipids
+, such as
+sphingomyelin
+and the complex
+glycosphingolipids
+.
+[
+3
+]
+Salvage pathway
+[
+edit
+]
+Constitutive degradation of sphingolipids and glycosphingolipids takes place in the acidic subcellular compartments, the late endosomes and the
+lysosomes
+, with the end goal of producing sphingosine. In the case of glycosphingolipids, exohydrolases acting at acidic pH optima cause the stepwise release of monosaccharide units from the end of the oligosaccharide chains, leaving just the sphingosine portion of the molecule, which may then contribute to the generation of ceramides. Ceramide can be further hydrolyzed by acid ceramidase to form sphingosine and a free fatty acid, both of which are able to leave the lysosome, unlike ceramide. The long-chain sphingoid bases released from the lysosome may then re-enter pathways for synthesis of ceramide and/or
+sphingosine-1-phosphate
+. The salvage pathway re-utilizes long-chain sphingoid bases to form ceramide through the action of ceramide synthase. Thus,
+ceramide synthase
+family members probably trap free sphingosine released from the lysosome at the surface of the
+endoplasmic reticulum
+or in endoplasmic reticulum-associated membranes. The salvage pathway has been estimated to contribute from 50% to 90% of sphingolipid biosynthesis.
+[
+4
+]
+Physiological roles
+[
+edit
+]
+Pathology
+[
+edit
+]
+As a bioactive lipid, ceramide has been implicated in a variety of physiological functions including
+apoptosis
+, cell growth arrest, differentiation, cell
+senescence
+, cell migration and adhesion.
+[
+3
+]
+Roles for ceramide and its downstream metabolites have also been suggested in a number of pathological states including
+cancer
+,
+neurodegeneration
+,
+diabetes
+, microbial pathogenesis,
+obesity
+, and
+inflammation
+.
+[
+5
+]
+[
+6
+]
+Several distinct ceramides potently predict
+major adverse cardiovascular events
+(MACE), namely C16:0, C18:0, and C24:1, although C24:0 has an inverse relationship.
+[
+7
+]
+[
+8
+]
+C16-C18 are harmful in the liver.
+[
+7
+]
+Ceramide levels are positively correlated with inflammation and oxidative stress in the liver, and the onset and progression of
+non-alcoholic fatty liver disease
+(NAFLD) is associated with elevated ceramide in
+hepatocytes
+.
+[
+8
+]
+Dietary intake of
+saturated fat
+has been shown to increase serum ceramide and increase
+insulin resistance
+.
+[
+7
+]
+Although initial studies showed increased insulin resistance in muscle, subsequent studies also showed increased insulin resistance in liver and
+adipose tissue
+.
+[
+8
+]
+Interventions that limit ceramide synthesis or increase ceramide degradation lead to improved health (reduced insulin resistance and reduced
+fatty liver disease
+, for example).
+[
+7
+]
+Ceramides induce skeletal muscle insulin resistance when synthesized as a result of saturated fat activation of
+TLR4
+receptors.
+[
+9
+]
+Unsaturated fat
+does not have this effect.
+[
+9
+]
+Ceramides induce insulin resistance in many tissues by inhibition of
+Akt/PKB signaling
+.
+[
+10
+]
+Aggregation of
+LDL cholesterol
+by ceramide causes LDL retention in arterial walls, leading to
+atherosclerosis
+.
+[
+11
+]
+Ceramides cause
+endothelial dysfunction
+by activating
+protein phosphatase 2
+(PP2A).
+[
+12
+]
+In mitochondria, ceramide suppresses the
+electron transport chain
+and induces production of
+reactive oxygen species
+.
+[
+13
+]
+Apoptosis
+[
+edit
+]
+One of the most studied roles of ceramide pertains to its function as a proapoptotic molecule.
+Apoptosis
+, or Type I
+programmed cell death
+, is essential for the maintenance of normal cellular homeostasis and is an important physiological response to many forms of cellular stress. Ceramide accumulation has been found following treatment of cells with a number of apoptotic agents, including ionizing radiation,
+[
+2
+]
+[
+14
+]
+UV
+light,
+[
+15
+]
+TNF-alpha
+,
+[
+16
+]
+and
+chemotherapeutic agents
+. This suggests a role for ceramide in the biological responses of all these agents. Because of its apoptosis-inducing effects in cancer cells, ceramide has been termed the "tumor suppressor lipid".  Several studies have attempted to define further the specific role of ceramide in the events of cell death and some evidence suggests ceramide functions upstream of the
+mitochondria
+in inducing apoptosis. However, owing to the conflicting and variable nature of studies into the role of ceramide in apoptosis, the mechanism by which this lipid regulates apoptosis remains elusive.
+[
+17
+]
+Skin
+[
+edit
+]
+The
+stratum corneum
+is the outermost layer of the
+epidermis
+.
+[
+18
+]
+[
+19
+]
+[
+20
+]
+It is composed of terminally differentiated and enucleated
+corneocytes
+that reside within a lipid matrix, like "bricks and mortar." Together with
+cholesterol
+and free fatty acids, ceramides form the lipid mortar, a water-impermeable barrier that prevents evaporative water loss. As a rule of thumb, the epidermal lipid matrix is composed of an equimolar mixture of ceramides (~50% by weight), cholesterol (~ 25% by weight), and free fatty acids (~15% by weight), with smaller quantities of other lipids also being present.
+[
+21
+]
+[
+22
+]
+The lipid barrier also protects against the entry of microorganisms.
+[
+20
+]
+Epidermal ceramides have a diversity of structures and can be broadly classified as AS and NS ceramides; ADS and NDS dihydroceramides;  AH, EOH, and NH 6-hydroxyceramides; AP and NP phytoceramides; and EOH and EOS acylceramides, see figure.
+Epidermal Ceramides. (Merleev et al., JCI Insight 2022, Supplemental Data p.14- Supplemental Fig. 1)
+[
+18
+]
+The diversity of ceramide structures undoubtedly plays an important role in the unique attributes of the stratum corneum across different body sites. For example, the stratum corneum of the face is thin and flexible to accommodate different facial expressions. In contrast, the stratum corneum covering the heel of the foot is thick and rigid to protect against trauma. Matching these structural changes, there are body-site specific alterations in the epidermal lipidome, including changes in the relative abundance of the different epidermal ceramide structures.
+[
+18
+]
+Similar to body site-specific alterations in ceramide abundance, there are also well-characterized changes in epidermal ceramide expression in patients with inflammatory skin diseases. In the
+hyperplastic
+disorder
+psoriasis
+, investigators have reported an increase in AS and NS ceramides and a decrease in EOS, AP, and NP ceramides, which may contribute to a defect in the skin's water impermeability barrier.
+[
+23
+]
+[
+24
+]
+[
+22
+]
+Studying ceramide expression in
+atopic dermatitis
+and
+psoriasis
+patients, other investigators have reported that rather than focusing on ceramide classes, ceramide sphingoid base length and fatty acid chain length have the strongest influence on the likelihood of a particular ceramide structure being upregulated or downregulated in inflamed skin.
+[
+18
+]
+Ceramide levels in the skin, hair, and nails can be reduced due to environmental changes (such as dry/polluted air), use of harsh sulfates, excessive heat (including heat styling), UV exposure, and biological aging.
+[
+25
+]
+Hormonal
+[
+edit
+]
+Inhibition of ceramide synthesis with
+myriocin
+in obese mice may lead to both improved
+leptin
+signaling and decreased
+insulin resistance
+by decreasing
+SOCS-3
+expression.
+[
+26
+]
+An elevated level of ceramide can cause insulin resistance by inhibiting the ability of insulin to activate the
+insulin signal transduction pathway
+and/or via the activation of
+JNK
+.
+[
+27
+]
+Substances known to induce ceramide generation
+[
+edit
+]
+Anandamide
+Ceramidase inhibitors
+Chemotherapeutic agents
+Fas ligand
+Endotoxin
+Homocysteine
+[
+28
+]
+Heat
+Hydroxypalmitoyl Sphinganine
+[
+29
+]
+[
+30
+]
+Gamma interferon
+Ionizing radiation
+[
+2
+]
+[
+31
+]
+Matrix metalloproteinases
+[
+28
+]
+Niacinamide
+Reactive oxygen species
+[
+28
+]
+Sphingosine
+[
+citation needed
+]
+Tetrahydrocannabinol
+and other
+cannabinoids
+[
+32
+]
+TNF-alpha
+[
+28
+]
+1,25 Dihydroxy vitamin D
+Mechanism by which ceramide signaling occurs
+[
+edit
+]
+Currently, the means by which ceramide acts as a signaling molecule are not clear.
+[
+citation needed
+]
+One hypothesis is that ceramide generated in the
+plasma membrane
+enhances
+membrane rigidity
+and stabilizes smaller lipid platforms known as
+lipid rafts
+, allowing them to serve as platforms for signalling molecules. Moreover, as rafts on one leaflet of the membrane can induce localized changes in the other leaflet of the bilayer, they can potentially serve as the link between signals from outside the cell to signals to be generated within the cell.
+[
+citation needed
+]
+Ceramide has also been shown to form organized large channels traversing the mitochondrial outer membrane. This leads to the egress of proteins from the intermembrane space.
+[
+33
+]
+[
+34
+]
+[
+35
+]
+Related diseases
+[
+edit
+]
+In the metabolic disease
+combined malonic and methylmalonic aciduria
+(CMAMMA) due to
+ACSF3
+, a massive altered composition of complex lipids occurs as a result of impaired
+mitochondrial fatty acid synthesis
+(mtFAS).
+[
+36
+]
+[
+37
+]
+For example, while the concentration of
+sphingomyelin
+is noticeably increased, the concentration of ceramides is proportionally decreased.
+[
+36
+]
+Uses
+[
+edit
+]
+Ceramides may be found as ingredients of some topical skin medications used to complement treatment for skin conditions such as
+eczema
+.
+[
+38
+]
+They are also used in cosmetic products such as some soaps, shampoos, skin creams, and sunscreens.
+[
+39
+]
+Additionally, ceramides are being explored as a potential therapeutic in treating cancer.
+[
+40
+]
+Ceramide in bacteria
+[
+edit
+]
+Ceramide is rarely found in bacteria.
+[
+41
+]
+Bacteria of family
+Sphingomonadaceae
+, however, contain it.
+[
+42
+]
+[
+43
+]
+Ceramide phosphoethanolamine
+[
+edit
+]
+Ceramide phosphoethanolamine (CPE) is a
+sphingolipid
+consisted of a ceramide and a
+phosphoethanolamine
+head group. CPE is the major sphingolipid class in some invertebrates such as members of
+Drosophila
+. In contrast, mammalian cells contain only small amounts of CPE.
+[
+citation needed
+]

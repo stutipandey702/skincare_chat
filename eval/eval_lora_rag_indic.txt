@@ -1,0 +1,29 @@
+Loaded niacinamide
+Loaded retinol
+Loaded salicylic-acid
+Loaded hyaluronic-acid
+Loaded glycolic-acid
+Loaded ascorbic-acid
+Loaded ceramide-np
+Loaded benzoyl-peroxide
+Loaded lactic-acid
+Loaded kojic-acid
+Loaded tranexamic-acid
+Loaded squalane
+Loaded zinc-oxide
+Loaded alpha-arbutin
+Loaded azelaic-acid
+Total chunks: 65, embedding...
+Index built.
+Running eval on 30 questions...
+
+[01/30] What does niacinamide do for the skin?...
+  5/6 — Comprehensive coverage of niacinamide benefits but could be more specific about mechanisms like melanin transfer inhibition and sebum control.
+
+[02/30] What is the difference between retinol and retinoids?...
+  1/6 — Contains major factual errors (retinol is not retinoic acid, not naturally produced during pregnancy) and includes irrelevant technical data instead of clearly explaining the retinol vs retinoids distinction.
+
+[03/30] What does salicylic acid do and what skin type is it best for?...
+  4/6 — Contains a major error by incorrectly identifying salicylic acid as an AHA when it's actually a BHA, though other information is generally accurate.
+
+[04/30] What is hyaluronic acid and how should it be applied?...
