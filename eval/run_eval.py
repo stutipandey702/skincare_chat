@@ -42,8 +42,12 @@ PIPE = pipeline("text-generation", model="./llama_skinchat_lora")
 # ── CHATBOT CALLER ────────────────────────────────────────────────────────────
 
 def call_chatbot(question: str) -> str:
+    
     context = retrieve(question)
     # print(f"  [CONTEXT] {context}")  # add this
+    # print("=== CONTEXT ===")
+    # print(context[:500])
+    # print("================\n")
     prompt = f"""You are a skincare assistant. Use the following information to answer the question.
 
 Context:

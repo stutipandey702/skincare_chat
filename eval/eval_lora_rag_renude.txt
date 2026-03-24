@@ -1,0 +1,99 @@
+[01/30] What does niacinamide do for the skin?...
+  5/6 — Accurate and relevant but lacks specific details about pore reduction, sebum control, and which skin types benefit most.
+
+[02/30] What is the difference between retinol and retinoids?...
+  2/6 — Response starts with a major error claiming retinol and retinoids are the same thing, then contradicts itself by correctly explaining they're different.
+
+[03/30] What does salicylic acid do and what skin type is it best for?...
+  5/6 — Response is detailed and addresses the question well, but incorrectly states salicylic acid is best for dry skin when it's primarily recommended for oily and acne-prone skin types.
+
+[04/30] What is hyaluronic acid and how should it be applied?...
+  0/6 — Response is incomplete and addresses glycolic acid instead of the asked-about hyaluronic acid.
+
+[05/30] What does glycolic acid do?...
+  0/6 — Response is incomplete and discusses lactic acid instead of the requested glycolic acid.
+
+[06/30] What is the role of ceramides in skincare?...
+  5/6 — Accurate and relevant but lacks specific details about ceramides being lipids that hold cells together and their benefits for particular skin conditions.
+
+[07/30] What does vitamin C do in skincare and what makes it unstable?...
+  4/6 — Good coverage of benefits and instability causes, but contains misleading claims about dosing and product disclosure that aren't accurate.
+
+[08/30] What is the difference between physical and chemical sunscreen?...
+  2/6 — Contains major inaccuracies about physical sunscreen ingredients and mechanisms, confusing oils/silicones with mineral actives.
+
+[09/30] Can I use niacinamide and vitamin C together?...
+  4/6 — Response addresses the question well but contains confusing dosage information and cuts off mid-sentence.
+
+[10/30] Can I use retinol and vitamin C together?...
+  3/6 — The response contradicts itself by saying both yes and no to using them together, creating confusion about the actual recommendation.
+
+[11/30] Can I use AHA/BHA with retinol?...
+  1/6 — Response is incomplete and fails to address the specific question about combining AHA/BHA with retinol, providing no useful guidance on this important safety concern.
+
+[12/30] Can I layer hyaluronic acid with niacinamide?...
+  5/6 — Good compatibility confirmation but lacks specific details about individual ingredient benefits and application guidance.
+
+[13/30] Can I use benzoyl peroxide with retinol?...
+  2/6 — The response incorrectly states these ingredients can be used together, missing the key interaction issue where benzoyl peroxide deactivates retinol.
+
+[14/30] Is it safe to use vitamin C with sunscreen?...
+  5/6 — Response correctly confirms safety and benefits but lacks specific application instructions like order of use.
+
+[15/30] Can I use salicylic acid and niacinamide together?...
+  4/6 — The response contradicts itself by first saying they cannot be used together, then explaining how they work well together.
+
+[16/30] What is the correct order to apply skincare products?...
+  2/6 — The response provides a confusing and incorrect order that contradicts basic skincare principles like applying thinnest to thickest products.
+
+[17/30] What is skin cycling and how does it work?...
+  1/6 — Response completely misses the actual definition of skin cycling as a structured rotation routine and instead provides generic skincare marketing language.
+
+[18/30] What skincare routine would you recommend for someone with dry skin?...
+  3/6 — Response addresses dry skin routine but lacks specific ingredient recommendations and contains contradictory advice about being suitable for all skin types.
+
+[19/30] What skincare routine would you recommend for someone with oily acne-p...
+  3/6 — Response addresses the question but contains a major error recommending heavy oils like coconut oil for oily acne-prone skin, which contradicts best practices.
+
+[20/30] How often should you exfoliate?...
+  2/6 — Response is completely off-topic, discussing retinol instead of exfoliation frequency.
+
+[21/30] What ingredients are best for hyperpigmentation?...
+  [ERROR] Judge failed: Expecting value: line 1 column 1 (char 0)
+  0/6 — Expecting value: line 1 column 1 (char 0)
+
+[22/30] What ingredients help with anti-aging?...
+  5/6 — Strong accuracy on retinoids but lacks breadth by not mentioning other key anti-aging ingredients like vitamin C, SPF, or AHAs.
+
+[23/30] What ingredients should someone with sensitive skin avoid?...
+  1/6 — Response completely misses the question about ingredients to avoid and instead lists unrelated skin conditions.
+
+[24/30] How do you treat fungal acne?...
+  2/6 — Contains major inaccuracies about fungal acne treatment and confuses it with bacterial acne treatment methods.
+
+[25/30] What is the skin barrier and how do you repair it?...
+  2/6 — Contains significant anatomical errors, incorrectly describing skin layers and confusing the skin barrier concept entirely.
+
+[26/30] Can I use copper peptides with vitamin C or retinol?...
+  2/6 — The response contradicts established skincare knowledge by recommending combinations that are generally advised against due to ingredient interactions.
+
+[27/30] Can I mix oils with my moisturizer?...
+  5/6 — The response correctly addresses mixing oils with moisturizer but lacks specific guidance on application order and oil recommendations for different skin types.
+
+[28/30] Do I still need moisturizer if I have oily skin?...
+  2/6 — Contains contradictory advice recommending both lightweight and heavy moisturizers, undermining the core message with inaccurate information.
+
+[29/30] Why is SPF important and what SPF level should I use?...
+  3/6 — Response addresses SPF importance and levels but contains factual errors about UVA protection percentages and confusing ending question about retinol.
+
+[30/30] Can I use lactic acid and retinol together?...
+  2/6 — Response contradicts itself by first saying it's recommended to use actives together, then correctly advising against combining lactic acid and retinol, but lacks specific reasoning or alternatives.
+
+==================================================
+  OVERALL SCORE: 82/180  (45.6%)
+==================================================
+  breadth_concerns                13/36  (36.1%)
+  breadth_routine                 13/36  (36.1%)
+  ingredient_interactions         33/60  (55.0%)
+  ingredient_knowledge            23/48  (47.9%)
+==================================================

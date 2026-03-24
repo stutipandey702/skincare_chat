@@ -3,6 +3,10 @@ import sys
 import re
 import json
 import threading
+import rag
+import chromadb
+from sentence_transformers import SentenceTransformer
+from build_rag import build_index
 
 # Set cache dirs BEFORE importing transformers
 _cache_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "hf_cache")
@@ -78,12 +82,46 @@ except Exception as e:
     print(f"Model load failed: {e}")
     sys.exit(1)
 
+# RAG LOADING
 
-def build_prompt(user_text: str) -> str:
+# print("Loading RAG...")
+
+# # Build index and get collection + embedder
+# collection, embedder = build_index()
+
+# # Optional: persist the collection to disk
+# # Use PersistentClient if you want to save the index
+# client = chromadb.PersistentClient(path="chroma_db")
+# # Save the collection if you want persistence
+# try:
+#     # Check if collection already exists on disk
+#     existing = client.get_collection("skincare")
+# except chromadb.errors.NotFoundError:
+#     # If not, create it and add documents from build_index
+#     client.create_collection("skincare", documents=collection.get()["documents"],
+#                              embeddings=collection.get()["embeddings"],
+#                              ids=collection.get()["ids"])
+
+# # Load into RAG
+# rag.load_index(collection, embedder)
+
+# print("RAG loaded.")
+
+
+def build_prompt(user_text: str, context: str="") -> str:
     return (
-        f"<|system|>\nYou are a helpful skincare assistant.</s>\n"
-        f"<|user|>\n{user_text}</s>\n"
-        f"<|assistant|>\n"
+        "<|system|>\n"
+        "You are a helpful skincare assistant.\n"
+        "Utilize the context when it is relevant; however, you should not just be repeating the context word for word.\n"
+        "If the context doesn't contain enough information, you can ignore it and just answer based on your own knowledge.\n"
+        "Your answer must be 200 characters or less. Do not ask any questions in your response.\n"
+        "</s>\n\n"
+
+        "Context:\n"
+        f"{context}\n\n"
+
+        f"Question: {user_text}\n"
+        "<|assistant|>\n"
     )
 
 
@@ -105,7 +143,13 @@ def ask():
     if not prompt:
         return jsonify({"error": "No prompt provided"}), 400
 
+    # context = rag.retrieve(prompt, n=2)
+
+    # # prevent context overflow (VERY important for TinyLlama)
+    # context = context[:2000]
+
     formatted = build_prompt(prompt)
+
     inputs    = tokenizer(
         formatted,
         return_tensors="pt",
@@ -142,7 +186,12 @@ def ask_stream():
     if not prompt:
         return jsonify({"error": "No prompt provided"}), 400
 
-    formatted = build_prompt(prompt)
+    context = rag.retrieve(prompt, n=2)
+    context = context[:2000]
+    print(f"debug = {context[:100]}")
+
+    formatted = build_prompt(prompt, context)
+
     inputs    = tokenizer(
         formatted,
         return_tensors="pt",
