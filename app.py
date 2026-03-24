@@ -22,7 +22,7 @@ import torch
 
 app = Flask(__name__)
 
-# ── Device selection: prefer MPS (Apple Silicon GPU) over CPU ──────────────────
+# ── Device selection: prefer MPS (Apple Silicon GPU) over CPU
 if torch.backends.mps.is_available():
     DEVICE = torch.device("mps")
     DTYPE  = torch.float16        # float16 runs well on MPS
@@ -70,7 +70,7 @@ def load_model():
     return tokenizer, model
 
 
-print("🚀 Loading model...")
+print("Loading model...")
 try:
     tokenizer, model = load_model()
     model_type = "TinyLlama + LoRA"
@@ -130,7 +130,7 @@ def ask():
     return jsonify({"response": response, "model_used": model_type})
 
 
-# ── Streaming endpoint (new — much better perceived speed) ────────────────────
+# ── Streaming endpoint (new — much better perceived speed)
 @app.route("/ask/stream", methods=["POST"])
 def ask_stream():
     """
@@ -205,5 +205,5 @@ def health():
 
 
 if __name__ == "__main__":
-    print(f"🎉 Server starting — model: {model_type} | device: {DEVICE}")
+    print(f"Server starting — model: {model_type} | device: {DEVICE}")
     app.run(host="0.0.0.0", port=7860, debug=False)
