@@ -114,7 +114,7 @@ def build_prompt(user_text: str, context: str="") -> str:
         "You are a helpful skincare assistant.\n"
         "Utilize the context when it is relevant; however, you should not just be repeating the context word for word.\n"
         "If the context doesn't contain enough information, you can ignore it and just answer based on your own knowledge.\n"
-        "Your answer must be 200 characters or less. Do not ask any questions in your response.\n"
+        "Your answer must be within 3-4 sentences. Do not ask any questions in your response.\n"
         "</s>\n\n"
 
         "Context:\n"
@@ -143,10 +143,10 @@ def ask():
     if not prompt:
         return jsonify({"error": "No prompt provided"}), 400
 
-    # context = rag.retrieve(prompt, n=2)
+    context = rag.retrieve(prompt, n=2)
 
-    # # prevent context overflow (VERY important for TinyLlama)
-    # context = context[:2000]
+    # prevent context overflow (VERY important for TinyLlama)
+    context = context[:2000]
 
     formatted = build_prompt(prompt)
 
@@ -209,7 +209,7 @@ def ask_stream():
     gen_kwargs = dict(
         **inputs,
         streamer=streamer,
-        max_new_tokens=150,
+        max_new_tokens=300,
         do_sample=True,
         temperature=0.7,
         top_p=0.9,

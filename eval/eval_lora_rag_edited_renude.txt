@@ -1,0 +1,44 @@
+niacinamide
+[CACHE] Loaded niacinamide
+retinol
+[CACHE] Loaded retinol
+salicylic-acid
+[CACHE] Loaded salicylic-acid
+hyaluronic-acid
+[CACHE] Loaded hyaluronic-acid
+glycolic-acid
+[CACHE] Loaded glycolic-acid
+vitamin-c
+[CACHE] Loaded vitamin-c
+ceramides
+[CACHE] Loaded ceramides
+lactic-acid
+[CACHE] Loaded lactic-acid
+kojic-acid
+[CACHE] Loaded kojic-acid
+tranexamic-acid
+[CACHE] Loaded tranexamic-acid
+squalane
+[CACHE] Loaded squalane
+azelaic-acid
+[CACHE] Loaded azelaic-acid
+caffeine
+[CACHE] Loaded caffeine
+glycoproteins
+[CACHE] Loaded glycoproteins
+sunscreen-spf
+[CACHE] Loaded sunscreen-spf
+skin-concerns
+[CACHE] Loaded skin-concerns
+facial-oils
+[CACHE] Loaded facial-oils
+routine-ordering
+[CACHE] Loaded routine-ordering
+alpha-arbutin-copper-peptides
+[CACHE] Loaded alpha-arbutin-copper-peptides
+Total chunks: 41
+Embedding...
+✅ Index built and saved to disk.
+Running eval on 30 questions...
+
+[01/30] What does niacinamide do for the skin?...
